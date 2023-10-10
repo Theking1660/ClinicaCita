@@ -1,0 +1,17 @@
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\bin\Debug\Cita_Medica.exe.config
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\bin\Debug\Cita_Medica.exe
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\bin\Debug\Cita_Medica.pdb
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.csproj.AssemblyReference.cache
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.Properties.Resources.resources
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.csproj.GenerateResource.cache
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.exe
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.pdb
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.Login.resources
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.Principal.resources
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.Paciente.resources
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.Calendario.resources
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.Medico.resources
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.Citas.resources
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.ModificarCitas.resources
+C:\Users\gabri\Documentos\C#\Cita_Medica\Cita_Medica\obj\Debug\Cita_Medica.Estadisticas.resources
