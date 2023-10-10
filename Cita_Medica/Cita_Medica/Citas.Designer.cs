@@ -44,11 +44,14 @@
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new Cita_Medica.ClinicaSetTableAdapters.UsuarioTableAdapter();
             this.pacienteTableAdapter = new Cita_Medica.ClinicaSetTableAdapters.PacienteTableAdapter();
+            this.ultimos_PacientesToolStrip = new System.Windows.Forms.ToolStrip();
+            this.ultimos_PacientesToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.medicoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clinicaSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clinicaSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            this.ultimos_PacientesToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -167,11 +170,33 @@
             // 
             this.pacienteTableAdapter.ClearBeforeFill = true;
             // 
+            // ultimos_PacientesToolStrip
+            // 
+            this.ultimos_PacientesToolStrip.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ultimos_PacientesToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.ultimos_PacientesToolStrip.Font = new System.Drawing.Font("Myanmar Text", 14F);
+            this.ultimos_PacientesToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ultimos_PacientesToolStripButton});
+            this.ultimos_PacientesToolStrip.Location = new System.Drawing.Point(588, 140);
+            this.ultimos_PacientesToolStrip.Name = "ultimos_PacientesToolStrip";
+            this.ultimos_PacientesToolStrip.Size = new System.Drawing.Size(180, 41);
+            this.ultimos_PacientesToolStrip.TabIndex = 15;
+            this.ultimos_PacientesToolStrip.Text = "Ultimos Pacientes";
+            // 
+            // ultimos_PacientesToolStripButton
+            // 
+            this.ultimos_PacientesToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ultimos_PacientesToolStripButton.Name = "ultimos_PacientesToolStripButton";
+            this.ultimos_PacientesToolStripButton.Size = new System.Drawing.Size(168, 38);
+            this.ultimos_PacientesToolStripButton.Text = "Ultimos Pacientes";
+            this.ultimos_PacientesToolStripButton.Click += new System.EventHandler(this.ultimos_PacientesToolStripButton_Click);
+            // 
             // Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ultimos_PacientesToolStrip);
             this.Controls.Add(this.comboPaciente);
             this.Controls.Add(this.comboMedico);
             this.Controls.Add(this.label1);
@@ -179,6 +204,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Citas";
             this.Text = "Citas";
             this.Load += new System.EventHandler(this.Citas_Load);
@@ -187,6 +213,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.clinicaSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            this.ultimos_PacientesToolStrip.ResumeLayout(false);
+            this.ultimos_PacientesToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +236,7 @@
         private ClinicaSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private System.Windows.Forms.BindingSource pacienteBindingSource;
         private ClinicaSetTableAdapters.PacienteTableAdapter pacienteTableAdapter;
+        private System.Windows.Forms.ToolStrip ultimos_PacientesToolStrip;
+        private System.Windows.Forms.ToolStripButton ultimos_PacientesToolStripButton;
     }
 }

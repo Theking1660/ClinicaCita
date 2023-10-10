@@ -1,4 +1,4 @@
-﻿using Cita_Medica.Funciones;
+﻿using Cita_Medica.Funciones; // Importa el espacio de nombres Funciones
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,45 +16,67 @@ namespace Cita_Medica
         public Citas()
         {
             InitializeComponent();
-            this.TopLevel = false;
+            this.TopLevel = false; // Establece el formulario como secundario en la jerarquía de ventanas
         }
 
         private void Citas_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'clinicaSet.Paciente' Puede moverla o quitarla según sea necesario.
+            // Carga datos de pacientes, usuarios y médicos al formulario
             this.pacienteTableAdapter.Fill(this.clinicaSet.Paciente);
-
-            // TODO: esta línea de código carga datos en la tabla 'clinicaSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.clinicaSet.Usuario);
-            // TODO: esta línea de código carga datos en la tabla 'clinicaSet.Medico' Puede moverla o quitarla según sea necesario.
             this.medicoTableAdapter.Fill(this.clinicaSet.Medico);
-
-            // TODO: esta línea de código carga datos en la tabla 'clinicaSet.Paciente' Puede moverla o quitarla según sea necesario.
-            this.pacienteTableAdapter.Fill(this.clinicaSet.Paciente);
-
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AgregarCitas agregar = new AgregarCitas();
+            AgregarCitas agregar = new AgregarCitas(); // Crea una instancia de la clase AgregarCitas
 
+            // Obtiene el ID del paciente y el ID del médico seleccionados en los ComboBox
             int idpaciente = int.Parse(comboPaciente.SelectedValue.ToString());
-            int idmedico = int.Parse(comboMedico.SelectedValue.ToString()) ;    
+            int idmedico = int.Parse(comboMedico.SelectedValue.ToString());
+
+            // Intenta agregar una nueva cita utilizando los datos seleccionados en el formulario
             if (agregar.Agregar(idpaciente, idmedico, dateTimePicker1.Value))
             {
-                MessageBoxIcon icon = MessageBoxIcon.Information;
-                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBoxIcon icon = MessageBoxIcon.Information; // Define un ícono de información
+                MessageBoxButtons buttons = MessageBoxButtons.OK; // Define botones de "Aceptar"
+
+                // Muestra un mensaje de éxito al agregar la cita
                 MessageBox.Show("Cita Agregada", "Estado", buttons, icon);
-
-
             }
             else
             {
-                MessageBoxIcon icon = MessageBoxIcon.Error;
+                MessageBoxIcon icon = MessageBoxIcon.Error; // Define un ícono de error
+
+                // Muestra un mensaje de error con el mensaje de error proporcionado por AgregarCitas
                 MessageBox.Show(agregar.Error, "Error", MessageBoxButtons.OK, icon);
             }
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.pacienteTableAdapter.FillBy(this.clinicaSet.Paciente);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void ultimos_PacientesToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.pacienteTableAdapter.Ultimos_Pacientes(this.clinicaSet.Paciente);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

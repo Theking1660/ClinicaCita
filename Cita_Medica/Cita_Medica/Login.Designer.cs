@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.TxtContra = new System.Windows.Forms.TextBox();
             this.BtnIniciar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TxtUsuario
@@ -44,7 +46,6 @@
             this.TxtUsuario.Size = new System.Drawing.Size(250, 44);
             this.TxtUsuario.TabIndex = 0;
             this.TxtUsuario.Tag = "";
-            this.TxtUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // TxtContra
             // 
@@ -56,7 +57,6 @@
             this.TxtContra.Size = new System.Drawing.Size(250, 44);
             this.TxtContra.TabIndex = 1;
             this.TxtContra.Tag = "";
-            this.TxtContra.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // BtnIniciar
             // 
@@ -82,7 +82,6 @@
             this.label1.Size = new System.Drawing.Size(63, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Usuario";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -94,7 +93,19 @@
             this.label2.Size = new System.Drawing.Size(87, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Myanmar Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(753, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 48);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Login
             // 
@@ -102,14 +113,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnIniciar);
             this.Controls.Add(this.TxtContra);
             this.Controls.Add(this.TxtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,6 +136,7 @@
         private System.Windows.Forms.Button BtnIniciar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
